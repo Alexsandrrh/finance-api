@@ -1,0 +1,35 @@
+{
+  "name": "finapi",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "license": "MIT",
+
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prebuild": "rimraf dist",
+    "build": "npm run prebuild && tsc",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20.11.28",
+    "@types/qs": "^6.9.12",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "crypto-js": "^4.2.0",
+    "qs": "^6.12.0"
+  }
+}
