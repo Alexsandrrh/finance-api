@@ -1,7 +1,14 @@
 {
-  "name": "finapi",
+  "name": "finance-api",
   "version": "1.0.0",
   "license": "MIT",
+  "description": "All banks, exchanges in one place",
+  "keywords": [
+    "Banks",
+    "Cryptocurrencies",
+    "Exchanges",
+    "Finance"
+  ],
   "type": "module",
   "files": [
     "dist"
