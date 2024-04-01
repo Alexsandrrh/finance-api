@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "license": "MIT",
-
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prebuild": "rimraf dist",
-    "build": "npm run prebuild && tsc",
-    "prepare": "husky install"
+    "build": "npm run prebuild && tsc"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
