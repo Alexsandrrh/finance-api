@@ -15,7 +15,6 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --fix",
-    "prebuild": "rimraf dist",
     "build": "rollup -c",
     "install": "npm run build"
   },
