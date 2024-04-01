@@ -3,12 +3,22 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
-  "main": "./build/cjs/index.js",
-  "module": "./build/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --fix",
+    "prebuild": "rimraf dist",
     "build": "rollup -c"
   },
   "devDependencies": {
