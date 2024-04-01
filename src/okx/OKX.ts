@@ -5,6 +5,9 @@ import * as qs from 'qs';
 import { TradingBot } from './TradingBot';
 import { OKXConfig } from './types';
 
+// eslint-disable-next-line no-console
+console.dir(CryptoJS);
+
 export class OKX {
   /**
    * @description Настроенная конфигурация axios для запросов.
