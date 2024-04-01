@@ -17,7 +17,7 @@
     "lint:fix": "eslint . --fix",
     "prebuild": "npx rimraf dist",
     "build": "npx rollup -c",
-    "install": "npm run build"
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
