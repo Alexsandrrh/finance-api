@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 import * as CryptoJS from 'crypto-js';
-
 import * as qs from 'qs';
+
 import { TradingBot } from './TradingBot';
 import { OKXConfig } from './types';
 

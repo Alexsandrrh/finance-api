@@ -7,14 +7,6 @@ import {
   GetSubOrdersParams,
 } from './types';
 
-interface WithdrawIncomeParams {
-  algoId: string
-}
-
-interface WithdrawIncomeResponse {
-
-}
-
 /**
  * @description Сеточный трейдинговый бот.
  * */
@@ -34,7 +26,4 @@ export class TradingBotGrid {
       '/api/v5/tradingBot/grid/sub-orders',
       { params },
     );
-
-
-  readonly withdrawIncome = ({}) => this.okx.instance.post('/api/v5/tradingBot/grid/withdraw-income')
 }
