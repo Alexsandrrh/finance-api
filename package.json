@@ -32,7 +32,7 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.11.28",
-    "@types/qs": "^6.9.12",
+    "@types/qs": "^6.9.14",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
     "eslint": "^8.0.1",
