@@ -1,6 +1,7 @@
 import { OKX } from '../../OKX';
 import { OKXResponse } from '../../types';
 import {
+  GetOrderDetailsParams,
   GetOrdersAlgoPendingData,
   GetOrdersAlgoPendingParams,
   GetSubOrdersData,
@@ -25,5 +26,13 @@ export class TradingBotGrid {
     this.okx.instance.get<OKXResponse<GetSubOrdersData>>(
       '/api/v5/tradingBot/grid/sub-orders',
       { params },
+    );
+
+  readonly getOrderDetails = (params: GetOrderDetailsParams) =>
+    this.okx.instance.get<OKXResponse<unknown>>(
+      '/api/v5/tradingBot/grid/orders-algo-details',
+      {
+        params,
+      },
     );
 }

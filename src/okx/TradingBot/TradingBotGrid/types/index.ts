@@ -1,4 +1,5 @@
 export * from './AlgoOrdType';
+export * from './GetOrderDetailsParams';
 export * from './GetOrdersAlgoPendingData';
 export * from './GetOrdersAlgoPendingDataItem';
 export * from './GetOrdersAlgoPendingParams';
