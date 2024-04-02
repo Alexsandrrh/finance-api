@@ -15,7 +15,7 @@ export class TradingBotGrid {
 
   readonly getOrdersAlgoPending = (params: GetOrdersAlgoPendingParams) =>
     this.okx.instance.get<OKXResponse<GetOrdersAlgoPendingData>>(
-      '/api/v5/tradingBot/grid/orders-algo-pending',
+      '/tradingBot/grid/orders-algo-pending',
       {
         params,
       },
@@ -23,7 +23,7 @@ export class TradingBotGrid {
 
   readonly getSubOrders = (params: GetSubOrdersParams) =>
     this.okx.instance.get<OKXResponse<GetSubOrdersData>>(
-      '/api/v5/tradingBot/grid/sub-orders',
+      '/tradingBot/grid/sub-orders',
       { params },
     );
 }

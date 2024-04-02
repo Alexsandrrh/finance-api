@@ -1,11 +1,17 @@
 import axios, { AxiosInstance } from 'axios';
 import CryptoJS from 'crypto-js';
 import qs from 'qs';
+import urlJoin from 'url-join';
 
 import { TradingBot } from './TradingBot';
 import { OKXConfig } from './types';
 
 export class OKX {
+  /**
+   * @description Домен сервиса.
+   * */
+  readonly domain = 'https://www.okx.com';
+
   /**
    * @description Настроенная конфигурация axios для запросов.
    * */
@@ -16,9 +22,15 @@ export class OKX {
    * */
   readonly tradingBot: TradingBot;
 
-  constructor({ apiKey, passphrase, secretKey, isDemo }: OKXConfig) {
+  constructor({
+    apiKey,
+    passphrase,
+    secretKey,
+    isDemo,
+    version = 'v5',
+  }: OKXConfig) {
     this.instance = axios.create({
-      baseURL: 'https://www.okx.com',
+      baseURL: urlJoin(this.domain, 'api', version),
       headers: {
         'OK-ACCESS-KEY': apiKey,
         'OK-ACCESS-PASSPHRASE': passphrase,
