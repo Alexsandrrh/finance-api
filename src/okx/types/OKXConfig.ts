@@ -3,5 +3,5 @@ export interface OKXConfig {
   secretKey: string;
   passphrase: string;
   isDemo?: boolean;
-  version?: string | 'v5';
+  version?: 'v5';
 }
