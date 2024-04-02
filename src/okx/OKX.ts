@@ -37,9 +37,6 @@ export class OKX {
       },
     });
     this.instance.interceptors.request.use((config) => {
-      // eslint-disable-next-line no-console
-      console.log(config);
-
       const timestamp = new Date().toISOString();
 
       if (isDemo) config.headers.set('x-simulated-trading', 1);
@@ -52,7 +49,7 @@ export class OKX {
             timestamp +
               config.method?.toUpperCase() +
               [
-                config.url,
+                urlJoin('api', version, config.url),
                 qs.stringify(config.params, { arrayFormat: 'brackets' }),
               ]
                 .filter(Boolean)
