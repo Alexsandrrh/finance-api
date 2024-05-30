@@ -1,22 +1,20 @@
-import axios, { AxiosInstance } from 'axios';
+import axios from 'axios';
 import CryptoJS from 'crypto-js';
 import qs from 'qs';
 
+import { Base } from '../Base';
 import { TradingBot } from './TradingBot';
 import { OKXConfig } from './types';
 
-export class OKX {
-  /**
-   * @description Настроенная конфигурация axios для запросов.
-   * */
-  readonly instance: AxiosInstance;
-
+export class OKX extends Base {
   /**
    * @description Трейдинговый бот.
    * */
   readonly tradingBot: TradingBot;
 
   constructor({ apiKey, passphrase, secretKey, isDemo }: OKXConfig) {
+    super();
+
     this.instance = axios.create({
       baseURL: 'https://www.okx.com',
       headers: {
@@ -24,6 +22,7 @@ export class OKX {
         'OK-ACCESS-PASSPHRASE': passphrase,
       },
     });
+
     this.instance.interceptors.request.use((config) => {
       const timestamp = new Date().toISOString();
 
