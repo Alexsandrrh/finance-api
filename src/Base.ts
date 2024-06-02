@@ -7,5 +7,5 @@ export class Base {
   /**
    * @description Настроенная конфигурация axios для запросов.
    * */
-  protected instance: AxiosInstance = axios.create();
+  instance: AxiosInstance = axios.create();
 }
